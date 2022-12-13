@@ -1,0 +1,71 @@
+/* Define the css */
+
+.landingcard {
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 10px;
+    position: relative;
+    height: 111px;
+    margin: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/landing-banner.png);
+    background-size: cover;
+}
+
+
+
+.landingcard h3 {
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 48px; */
+    line-height: 142.6%;
+
+}
+
+.landcardTitle {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 111px;
+}
+
+/* for screens below 335px */
+@media (min-width: 335px) {
+    .landingcard {
+        height: 111px;
+        width: auto;
+    }
+
+    .landingcard h3 {
+        font-size: 24px;
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 340px) and (max-width: 1024px) {
+    .landingcard {
+        height: 111px;
+        width: auto;
+    }
+
+    .landingcard h3 {
+        font-size: 24px;
+    }
+}
+
+/* for screens above 1024px */
+@media (min-width: 1024px) {
+    .landingcard {
+        height: 223px;
+        width: auto;
+    }
+
+    .landingcard h3 {
+        font-size: 64px;
+    }
+}
