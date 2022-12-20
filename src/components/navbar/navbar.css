@@ -1,0 +1,50 @@
+.navbar {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navLink {
+    color: #FF6060;
+    float: right;
+    margin-top: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+}
+
+
+/* for screens below 335px */
+@media (min-width: 335px) {
+    .navLink {
+        /* Make the distance between the navigation */
+        margin-left: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 340px) and (max-width: 960px) {
+    .navLink {
+        /* Make the distance between the navigation */
+        margin-left: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+    }
+}
+
+/* for screens above 960px*/
+@media (min-width: 960px) {
+    .navLink {
+        /* Make the distance between the navigation */
+        margin-left: 30px;
+        font-size: 24px;
+    }
+}
