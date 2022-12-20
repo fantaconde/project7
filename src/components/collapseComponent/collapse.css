@@ -1,0 +1,69 @@
+.collapseButton {
+    background-color: #FF6060;
+    color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+}
+
+.buttonArrow {
+    float: right;
+}
+
+
+.collapseDiv {
+
+    /* display: flex; */
+    flex-grow: 1;
+    margin: 20px;
+    position: relative;
+    /* width: auto;
+    width: 100vw; */
+}
+
+.collapseExpanded {
+    /* margin: 20px; */
+    width: auto;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    color: #FF6060;
+    height: fit-content;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 10px;
+}
+
+
+
+/* for screens below 335px */
+@media (min-width: 335px) {
+
+    .collapseExpanded {
+        font-size: 14px;
+    }
+}
+
+/* Screen between  335px to 720px */
+@media (min-width: 340px) and (max-width: 720px) {
+    .collapseExpanded {
+        font-size: 16px;
+    }
+}
+
+/* for screens above 720px */
+@media (min-width: 720px) {
+    .collapseExpanded {
+        font-size: 24px;
+    }
+}
