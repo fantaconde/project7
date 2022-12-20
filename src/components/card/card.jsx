@@ -1,8 +1,9 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import "./card.css";
+import { Link } from "react-router-dom";
 
-export default function KasaCard({title, cover}) {
+export default function KasaCard({title, cover, id}) {
   return (
     <Card className="card" sx={{ maxWidth: 345 }} >
       {/* Display an image */}
@@ -12,7 +13,9 @@ export default function KasaCard({title, cover}) {
       ></img>
       {/* Display link */}
       <div>
-        <a href="/">{title}</a>
+        {/* <a href="/property/:key">{title}</a> */}
+        <Link to={`/property/${id}`}>{title}</Link>
+        
       </div>
     </Card>
   );

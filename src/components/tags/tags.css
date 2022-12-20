@@ -1,0 +1,21 @@
+.tag {
+    margin: 10px;
+    background-color: #FF6060;
+    color: white;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}

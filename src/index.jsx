@@ -6,7 +6,7 @@ import NavBar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import About from "./pages/aboutpage/aboutpage";
 import ErrorPage from "./pages/errorpage/error";
-
+import PropertyDetails from "./pages/propertyDetails/propertyDetails";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -16,6 +16,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/property/:key" element={<PropertyDetails />} />
       </Routes>
     </Router>
     {/* The footer component */}

@@ -8,14 +8,12 @@ import image from '../../assets/landing-banner.png'
 export default function Home() {
   return (
     <div className="home">
-      <LandingCard
-        title="Chez vous, partout et ailleurs"
-        image={image}
-      />
+      <LandingCard title="Chez vous, partout et ailleurs" image={image} />
       <div className="homeProperties">
         {properties.map((property) => (
           <KasaCard
             key={property.id}
+            id={property.id}
             title={property.title}
             cover={property.cover}
           />
