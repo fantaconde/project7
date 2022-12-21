@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import Tags from "../../components/tags/tags";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 
 export default function PropertyDetails() {
   // Get property from url
@@ -27,7 +29,9 @@ export default function PropertyDetails() {
     //set the property equipments
     setEquipments(Property.equipments);
     //make the equpment a list of values
-    const listItems = equipments.map((equipment, key) => <li key={equipment.id}>{equipment}</li>);
+    const listItems = equipments.map((equipment, key) => (
+      <li key={equipment.id}>{equipment}</li>
+    ));
     //set the list of equipments
     setEquipmentsList(listItems);
     // console.log(homeProperty.equipments);
@@ -41,13 +45,42 @@ export default function PropertyDetails() {
       {
         // Display the property tags
       }
-      <CollapseComponent
-        title="Description"
-        content={homeProperty.description}
-      />
-
-      <CollapseComponent title="Equipments" content={equipmentsList} />
+      <div className="property">
+        <div className="propertyTitleLocation">
+          <div className="propertyTitle">{homeProperty.title}</div>
+          <div className="propertyLocation">{homeProperty.location}</div>
+        </div>
+        <div className="propertyHost">
+          {homeProperty.host.name}
+          <div>
+            <img
+              className="hostPicture"
+              src={homeProperty.host.picture}
+              alt="hostPicture"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="propertyTagsStack">
         <Tags tags={tags} />
+        <Stack className="ratingStack" spacing={1}>
+          <Rating
+            className="rating"
+            name="half-rating-read"
+            defaultValue={homeProperty.rating}
+            precision={0.5}
+            readOnly
+          />
+        </Stack>
+      </div>
+      <div className="propertDescEquipment">
+        <CollapseComponent
+          title="Description"
+          content={homeProperty.description}
+        />
+
+        <CollapseComponent title="Equipments" content={equipmentsList} />
+      </div>
     </div>
   );
 }
