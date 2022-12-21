@@ -4,8 +4,8 @@ import "./tags.css";
 function Tags({ tags }) {
   return (
     <div className="tags">
-      {tags.map((tag) => (
-        <div className="tag">{tag}</div>
+      {tags.map((tag, id) => (
+        <div className="tag" key={id}>{tag}</div>
       ))}
     </div>
   );

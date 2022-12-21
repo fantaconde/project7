@@ -31,8 +31,8 @@ export default function PropertyDetails() {
     //set the property equipments
     setEquipments(Property.equipments);
     //make the equpment a list of values
-    const listItems = equipments.map((equipment, key) => (
-      <li key={equipment.id}>{equipment}</li>
+    const listItems = equipments.map((equipment, id) => (
+      <li key={id}>{equipment}</li>
     ));
     //set the list of equipments
     setEquipmentsList(listItems);
@@ -40,7 +40,6 @@ export default function PropertyDetails() {
     setHost(Property.host);
     //set the rating
     setRating(Property.rating);
-    // console.log(rating);
     //set Tags
     setTags(Property.tags);
   }, [equipments, homeProperty, params.key]);
@@ -69,7 +68,7 @@ export default function PropertyDetails() {
           <Rating
             className="rating"
             name="half-rating-read"
-            defaultValue={`${rating}`}
+            value={parseInt(rating)}
             precision={0.5}
             readOnly
           />
