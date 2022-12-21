@@ -18,6 +18,8 @@ export default function PropertyDetails() {
   const [equipments, setEquipments] = useState([]);
   const [equipmentsList, setEquipmentsList] = useState([]);
   const [tags, setTags] = useState([]);
+  const [host, setHost] = useState({});
+  const [rating, setRating] = useState(0);
 
   useEffect(() => {
     // console.log(params.key);
@@ -34,7 +36,11 @@ export default function PropertyDetails() {
     ));
     //set the list of equipments
     setEquipmentsList(listItems);
-    // console.log(homeProperty.equipments);
+    //set the host details
+    setHost(Property.host);
+    //set the rating
+    setRating(Property.rating);
+    // console.log(rating);
     //set Tags
     setTags(Property.tags);
   }, [equipments, homeProperty, params.key]);
@@ -51,13 +57,9 @@ export default function PropertyDetails() {
           <div className="propertyLocation">{homeProperty.location}</div>
         </div>
         <div className="propertyHost">
-          {homeProperty.host.name}
+          {host.name}
           <div>
-            <img
-              className="hostPicture"
-              src={homeProperty.host.picture}
-              alt="hostPicture"
-            />
+            <img className="hostPicture" src={host.picture} alt="hostPicture" />
           </div>
         </div>
       </div>
@@ -67,7 +69,7 @@ export default function PropertyDetails() {
           <Rating
             className="rating"
             name="half-rating-read"
-            defaultValue={homeProperty.rating}
+            defaultValue={`${rating}`}
             precision={0.5}
             readOnly
           />
