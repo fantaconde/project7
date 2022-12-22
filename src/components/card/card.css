@@ -9,7 +9,7 @@
     position: relative;
     height: 255px;
     margin: 20px;
-    max-width: 335px;
+    max-width: 335px !important;
 
 }
 
@@ -48,7 +48,15 @@
 }
 
 /* Screen between  335px to 1024px */
-@media (min-width: 340px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 760px) {
+    .card {
+        max-width: 335px;
+        max-height: 255px;
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 765px) and (max-width: 1024px) {
     .card {
         max-width: 335px;
         max-height: 255px;

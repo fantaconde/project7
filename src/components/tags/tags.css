@@ -19,3 +19,45 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+/* for screens below 335px */
+@media (min-width: 335px) {
+    .tag {
+        margin: 10px;
+        background-color: #FF6060;
+        color: white;
+        border-radius: 10px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        width: fit-content;
+        padding: 5px;
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 420px) and (max-width: 760px) {
+    .tag {
+        margin: 10px;
+        background-color: #FF6060;
+        color: white;
+        border-radius: 10px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        width: fit-content;
+        padding: 5px;
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 765px) and (max-width: 1024px) {}
+
+/* for screens above 1024px */
+@media (min-width: 1024px) {}

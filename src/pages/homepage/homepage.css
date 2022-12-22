@@ -1,8 +1,47 @@
 .homeProperties {
-   
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
 }
+
+/* for screens below 335px */
+@media (min-width: 335px) {
+    .homeProperties {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 420px) and (max-width: 760px) {
+    .homeProperties {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 765px) and (max-width: 1024px) {
+    .homeProperties {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+}
+
+/* for screens above 1024px */
+@media (min-width: 1024px) {}

@@ -19,7 +19,6 @@
     margin: 20px;
     color: #ff6060;
     display: flex;
-
 }
 
 
@@ -41,7 +40,9 @@
     text-align: left;
     margin: 20px;
     color: #ff6060;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    margin-top: -5px;
+    margin-bottom: -5px;
 }
 
 .ratingStack {
@@ -73,4 +74,140 @@
     display: flex;
     flex: 1;
     /* justify-content: space-around; */
+}
+
+/* for screens below 335px */
+@media (max-width: 375px) {
+    .propertDescEquipment {
+        display: inline-block;
+    }
+
+    .propertyTitle {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 20px;
+        color: #ff6060;
+        margin-top: -5px;
+    }
+
+    .propertyTagsStack {
+        display: inline-block;
+        margin-right: -2px;
+        margin-bottom: 2px;
+    }
+
+    .property {
+        display: inline-block;
+    }
+
+    .propertyStackHost {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -20px;
+    }
+
+    .propertyTagsStack {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hostPicture {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 20px;
+        margin-top: -20px;
+    }
+
+    .ratingStack-xm {
+        display: none !important;
+    }
+
+    .propertyHost-xm {
+        display: none !important;
+    }
+
+
+}
+
+/* Screen between  370px to 720px */
+@media (min-width: 390px) and (max-width: 720px) {
+    .property {
+        display: inline-block;
+        /* justify-content: space-between; */
+    }
+
+    .propertyHost {
+        float: left;
+    }
+
+    .propertDescEquipment {
+        display: inline-block;
+    }
+
+    .propertyTagsStack {
+        display: inline-block;
+    }
+
+    .propertyTitle {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 20px;
+        color: #ff6060;
+        margin-top: -5px;
+    }
+
+    .ratingStack-xm {
+        display: none !important;
+    }
+
+    .propertyHost-xm {
+        display: none !important;
+    }
+
+    .propertyStackHost {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -20px;
+    }
+
+    .hostPicture {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 20px;
+        margin-top: -20px;
+    }
+
+    /* .propertyTagsStack {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+}
+
+/* for screens above 720px */
+@media (min-width: 720px) {
+    .propertDescEquipment {
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .propertyTagsStack {
+        display: flex;
+    }
+
+    .propertyStackHost {
+        display: none;
+    }
 }

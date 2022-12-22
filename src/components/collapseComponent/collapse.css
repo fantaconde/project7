@@ -48,7 +48,7 @@
 
 
 /* for screens below 335px */
-@media (min-width: 335px) {
+@media (max-width: 335px) {
 
     .collapseExpanded {
         font-size: 14px;

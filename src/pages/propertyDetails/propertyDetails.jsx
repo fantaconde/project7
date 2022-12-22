@@ -55,7 +55,7 @@ export default function PropertyDetails() {
           <div className="propertyTitle">{homeProperty.title}</div>
           <div className="propertyLocation">{homeProperty.location}</div>
         </div>
-        <div className="propertyHost">
+        <div className="propertyHost propertyHost-xm">
           {host.name}
           <div>
             <img className="hostPicture" src={host.picture} alt="hostPicture" />
@@ -64,7 +64,7 @@ export default function PropertyDetails() {
       </div>
       <div className="propertyTagsStack">
         <Tags tags={tags} />
-        <Stack className="ratingStack" spacing={1}>
+        <Stack className=" ratingStack ratingStack-xm" spacing={1}>
           <Rating
             className="rating"
             name="half-rating-read"
@@ -73,6 +73,23 @@ export default function PropertyDetails() {
             readOnly
           />
         </Stack>
+      </div>
+      <div className="propertyStackHost ">
+        <Stack className="ratingStack ratingStack-sm" spacing={1}>
+          <Rating
+            className="rating"
+            name="half-rating-read"
+            value={parseInt(rating)}
+            precision={0.5}
+            readOnly
+          />
+        </Stack>
+        <div className="propertyHost">
+          {host.name}
+          <div>
+            <img className="hostPicture" src={host.picture} alt="hostPicture" />
+          </div>
+        </div>
       </div>
       <div className="propertDescEquipment">
         <CollapseComponent
