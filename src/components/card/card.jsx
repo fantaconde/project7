@@ -7,7 +7,7 @@ export default function KasaCard({ title, cover, id }) {
     <div>
       <figure className="card">
         <img src={cover} alt="A beautiful landscape" />
-        <figcaption class="text-for-hebergement">
+        <figcaption>
           <Link to={`/property/${id}`}>{title}</Link>
         </figcaption>
       </figure>

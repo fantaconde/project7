@@ -11,6 +11,7 @@ export default function PropertyDetails() {
   // Get property from url
   const params = useParams();
 
+
   const [homeProperty, setHomeProperty] = useState({});
   const [equipments, setEquipments] = useState([]);
   const [equipmentsList, setEquipmentsList] = useState([]);
@@ -19,13 +20,16 @@ export default function PropertyDetails() {
   const [rating, setRating] = useState(0);
   const [carouselImages, setCarouselImages] = useState([]);
 
+
   useEffect(() => {
     // console.log(params.key);
     //get the property from the json file
     const Property = properties.find((property) => property.id === params.key);
-    console.log(Property);
+    // console.log(Property);
+
     //set the property value
     setHomeProperty(Property);
+
     //set the property equipments
     setEquipments(Property.equipments);
     //make the equpment a list of values
@@ -53,17 +57,22 @@ export default function PropertyDetails() {
       }
       <div className="property">
         <div className="propertyTitleLocation">
+          {/* Display the title */}
           <div className="propertyTitle">{homeProperty.title}</div>
+          {/* Display Location */}
           <div className="propertyLocation">{homeProperty.location}</div>
         </div>
         <div className="propertyHost propertyHost-xm">
+          {/* Displaying the host Name from host */}
           {host.name}
           <div>
+            {/* Displaying the host pictuire from host */}
             <img className="hostPicture" src={host.picture} alt="hostPicture" />
           </div>
         </div>
       </div>
       <div className="propertyTagsStack">
+        {/* displaying tags */}
         <Tags tags={tags} />
         <div className="ratingStack ratingStack-xm">
           <div className="rating">
