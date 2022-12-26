@@ -1,22 +1,22 @@
-import Collapse from "@mui/material/Collapse";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import React from "react";
 import "./collapse.css";
 
-function CollapseComponent({title, content}) {
-  const [expanded, setExpanded] = React.useState(false);
-
+function CollapseComponent({ title, content }) {
   return (
     <div className="collapseDiv">
-      <button className="collapseButton" onClick={() => setExpanded(!expanded)}>
-        {title}<span className="buttonArrow">{expanded ? <ExpandLessIcon /> : <KeyboardArrowDownIcon />}</span>
+      <button
+        data-toggle="collapse"
+        data-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+        className="collapseButton"
+      >
+        {title}
       </button>
-      <Collapse in={expanded}>
-        <div className="collapseExpanded">
-          {content}
-        </div>
-      </Collapse>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+        <div className="collapseExpanded">{content}</div>
+      </div>
     </div>
   );
 }

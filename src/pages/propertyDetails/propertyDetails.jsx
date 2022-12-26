@@ -1,5 +1,4 @@
 import React from "react";
-import LandingCard from "../../components/landingcard/landingcard";
 import properties from "../../logements.json";
 import CollapseComponent from "../../components/collapseComponent/collapse";
 import "./propertyDetails.css";
@@ -7,8 +6,6 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import Tags from "../../components/tags/tags";
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
 
 export default function PropertyDetails() {
   // Get property from url
@@ -20,6 +17,7 @@ export default function PropertyDetails() {
   const [tags, setTags] = useState([]);
   const [host, setHost] = useState({});
   const [rating, setRating] = useState(0);
+  const [carouselImages, setCarouselImages] = useState([]);
 
   useEffect(() => {
     // console.log(params.key);
@@ -42,11 +40,14 @@ export default function PropertyDetails() {
     setRating(Property.rating);
     //set Tags
     setTags(Property.tags);
+    //set carousel images
+    setCarouselImages(Property.pictures);
   }, [equipments, homeProperty, params.key]);
 
   return (
     <div className="propertyDetails">
-      <LandingCard />
+      {/* <LandingCard /> */}
+      {/* <CarouselCard imageSources={carouselImages} /> */}
       {
         // Display the property tags
       }
@@ -64,26 +65,26 @@ export default function PropertyDetails() {
       </div>
       <div className="propertyTagsStack">
         <Tags tags={tags} />
-        <Stack className=" ratingStack ratingStack-xm" spacing={1}>
-          <Rating
-            className="rating"
-            name="half-rating-read"
-            value={parseInt(rating)}
-            precision={0.5}
-            readOnly
-          />
-        </Stack>
+        <div className="ratingStack ratingStack-xm">
+          <div className="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
       </div>
       <div className="propertyStackHost ">
-        <Stack className="ratingStack ratingStack-sm" spacing={1}>
-          <Rating
-            className="rating"
-            name="half-rating-read"
-            value={parseInt(rating)}
-            precision={0.5}
-            readOnly
-          />
-        </Stack>
+        <div className="ratingStack ratingStack-sm">
+          <div className="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
         <div className="propertyHost">
           {host.name}
           <div>

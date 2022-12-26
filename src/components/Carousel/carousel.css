@@ -1,0 +1,46 @@
+.propertyCarousel {
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 25px;
+    position: relative;
+    height: 300px;
+    margin: 20px;
+}
+
+/* for screens below 335px */
+@media (min-width: 335px) {
+    .propertyCarousel {
+        height: 111px;
+        width: auto; 
+    }
+
+    .propertyCarousel h3 {
+        font-size: 24px;
+    }
+}
+
+/* Screen between  335px to 1024px */
+@media (min-width: 340px) and (max-width: 1024px) {
+    .propertyCarousel {
+        height: 111px;
+        width: auto;
+    }
+
+    .propertyCarousel h3 {
+        font-size: 24px;
+    }
+}
+
+/* for screens above 1024px */
+@media (min-width: 1024px) {
+    .propertyCarousel {
+        height: 223px;
+        width: auto !important; 
+    }
+
+    .propertyCarousel h3 {
+        font-size: 64px;
+    }
+}

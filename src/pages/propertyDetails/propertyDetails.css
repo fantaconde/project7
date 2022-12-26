@@ -55,7 +55,7 @@
 
 .rating {
     color: #ff6060 !important;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -210,4 +210,9 @@
     .propertyStackHost {
         display: none;
     }
+}
+
+
+.checked {
+  color: orange;
 }
