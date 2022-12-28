@@ -1,6 +1,7 @@
-.navbar {
+.navBar {
     margin-left: 20px;
     margin-right: 20px;
+    padding: 20px;
 }
 
 .navLink {
@@ -12,11 +13,12 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
+
 }
 
 
 /* for screens below 335px */
-@media (min-width: 335px) {
+@media (max-width: 767px) {
     .navLink {
         /* Make the distance between the navigation */
         margin-left: 10px;
@@ -28,23 +30,26 @@
     }
 }
 
-/* Screen between  335px to 1024px */
-@media (min-width: 340px) and (max-width: 960px) {
+@media (min-width:768px) and (max-width:991px) {
+
+    /* CSS */
     .navLink {
         /* Make the distance between the navigation */
-        margin-left: 10px;
         font-style: normal;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 28px;
         line-height: 142.6%;
+        margin-left: 20px;
     }
 }
 
-/* for screens above 960px*/
-@media (min-width: 960px) {
-    .navLink {
-        /* Make the distance between the navigation */
+@media (min-width:992px) {
+    .navBar {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navLink{
         margin-left: 30px;
-        font-size: 24px;
     }
 }

@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png";
 class NavBar extends Component {
   render() {
     return (
-      <div className="navbar">
+      <div className="navBar">
         <img src={logo} alt="logo" />
         <a className="navLink" href="/about">
           A PROPOS
