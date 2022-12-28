@@ -12,7 +12,6 @@ import "./index.css";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      {/* The header component */}
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
