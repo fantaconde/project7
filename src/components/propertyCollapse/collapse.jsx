@@ -1,15 +1,14 @@
 import React from "react";
 import "./collapse.css";
 
-function CollapseComponent({ title, content, style }) {
+function CollapseComponent({ title, content}) {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const toggle = () => {
     setIsExpanded(!isExpanded);
   };
-  console.log(style);
 
   return (
-        <div className="collapseDiv" style={style}>
+        <div className="collapseDiv">
         <button className="collapseButton" onClick={toggle}>
           {title}
         </button>

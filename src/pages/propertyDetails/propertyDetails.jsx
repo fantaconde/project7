@@ -19,13 +19,6 @@ export default function PropertyDetails() {
   const [rating, setRating] = useState(0);
   const [carouselImages, setCarouselImages] = useState([]);
 
-  const style = {
-    // Adding media query..
-    "@media (min-width:768px)": {
-      width: "50%",
-    },
-  };
-
   useEffect(() => {
     // console.log(params.key);
     //get the property from the json file
@@ -41,14 +34,19 @@ export default function PropertyDetails() {
     const listItems = equipments.map((equipment, id) => (
       <li key={id}>{equipment}</li>
     ));
+
+    // set the rating stars
+    setRating(Property.rating);
+
     //set the list of equipments
     setEquipmentsList(listItems);
+
     //set the host details
     setHost(Property.host);
-    //set the rating
-    setRating(Property.rating);
+
     //set Tags
     setTags(Property.tags);
+
     //set carousel images
     setCarouselImages(Property.pictures);
   }, [equipments, homeProperty, params.key]);
@@ -81,22 +79,28 @@ export default function PropertyDetails() {
         <Tags tags={tags} />
         <div className="ratingStack ratingStack-xm">
           <div className="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            {/* Generate the number of stars with a rating */}
+            {Array.from({ length: rating }, (_, i) => (
+              <span key={i} className="fa fa-star checked"></span>
+            ))}
+            {/* Generat ethe number of stars without a rating */}
+            {Array.from({ length: 5 - rating }, (_, i) => (
+              <span key={i} className="fa fa-star"></span>
+            ))}
           </div>
         </div>
       </div>
       <div className="propertyStackHost ">
         <div className="ratingStack ratingStack-sm">
           <div className="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            {/* Generate the number of stars with a rating */}
+            {Array.from({ length: rating }, (_, i) => (
+              <span key={i} className="fa fa-star checked"></span>
+            ))}
+            {/* Generat ethe number of stars without a rating */}
+            {Array.from({ length: 5 - rating }, (_, i) => (
+              <span key={i} className="fa fa-star"></span>
+            ))}
           </div>
         </div>
         <div className="propertyHost">
@@ -111,13 +115,8 @@ export default function PropertyDetails() {
         <CollapseComponent
           title="Description"
           content={homeProperty.description}
-          style={style}
         />
-        <CollapseComponent
-          title="Equipments"
-          content={equipmentsList}
-          style={style}
-        />
+        <CollapseComponent title="Equipments" content={equipmentsList} />
       </div>
     </div>
   );
