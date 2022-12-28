@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./carousel.css";
-function CarouselCard({ imageSources }) {
+
+function CarouselCard2({ imageSources }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [controlButton, setControlButton] = useState(true);
 
@@ -62,4 +62,4 @@ function CarouselCard({ imageSources }) {
   );
 }
 
-export default CarouselCard;
+export default CarouselCard2;

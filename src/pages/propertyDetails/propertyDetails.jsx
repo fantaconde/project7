@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import Tags from "../../components/tags/tags";
+import CarouselCard from "../../components/Carousel/carousel";
+
 
 export default function PropertyDetails() {
   // Get property from url
@@ -49,14 +51,14 @@ export default function PropertyDetails() {
 
     //set carousel images
     setCarouselImages(Property.pictures);
-  }, [equipments, homeProperty, params.key]);
+    console.log(carouselImages[0]);
+  }, [carouselImages, equipments, homeProperty, params.key]);
 
   return (
     <div className="propertyDetails">
-      {/* <LandingCard /> */}
-      {/* <CarouselCard imageSources={carouselImages} /> */}
       {
-        // Display the property tags
+        // Displaying the carousel
+        <CarouselCard imageSources={carouselImages} />
       }
       <div className="property">
         <div className="propertyTitleLocation">

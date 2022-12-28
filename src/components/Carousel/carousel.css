@@ -1,46 +1,41 @@
-.propertyCarousel {
+/* .carouselImages {
+    display: inline-block !important;
+    margin: 20px !important;
+    border-radius: 25px !important;
+    height: fit-content !important;
+    align-items: center ;
+    justify-content: center;
+} */
 
+.carouselImages img {
+    border-radius: 25px !important;
+    background-size: cover;
+    margin: 10px;
+    height: 415px;
+    width: 90vw !important;
+    vertical-align: auto;
+    /* min-width: none; */
+}
+
+.carouselImages button{
+    border-style: none;
+    background-color: transparent;
+}
+
+.carouselImages{
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    border-radius: 25px;
-    position: relative;
-    height: 300px;
-    margin: 20px;
+    justify-content: center;
 }
 
-/* for screens below 335px */
-@media (min-width: 335px) {
-    .propertyCarousel {
-        height: 111px;
-        width: auto; 
+@media (max-width: 767px) {
+    .carouselImages img {
+        height: 255px;
+        margin-left: 10px;
+
     }
 
-    .propertyCarousel h3 {
-        font-size: 24px;
-    }
 }
 
-/* Screen between  335px to 1024px */
-@media (min-width: 340px) and (max-width: 1024px) {
-    .propertyCarousel {
-        height: 111px;
-        width: auto;
-    }
+@media (min-width:768px){
 
-    .propertyCarousel h3 {
-        font-size: 24px;
-    }
-}
-
-/* for screens above 1024px */
-@media (min-width: 1024px) {
-    .propertyCarousel {
-        height: 223px;
-        width: auto !important; 
-    }
-
-    .propertyCarousel h3 {
-        font-size: 64px;
-    }
 }
