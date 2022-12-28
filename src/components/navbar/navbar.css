@@ -17,7 +17,7 @@
 }
 
 
-/* for screens below 335px */
+
 @media (max-width: 767px) {
     .navLink {
         /* Make the distance between the navigation */

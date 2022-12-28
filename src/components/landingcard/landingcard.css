@@ -34,8 +34,7 @@
     height: 111px;
 }
 
-/* for screens below 335px */
-@media (min-width: 335px) {
+@media (max-width: 767px) {
     .landingcard {
         height: 111px;
         width: auto;
@@ -46,8 +45,7 @@
     }
 }
 
-/* Screen between  335px to 1024px */
-@media (min-width: 340px) and (max-width: 1024px) {
+@media (min-width:768px) and (max-width:991px) {
     .landingcard {
         height: 111px;
         width: auto;
@@ -58,8 +56,7 @@
     }
 }
 
-/* for screens above 1024px */
-@media (min-width: 1024px) {
+@media (min-width:992px) {
     .landingcard {
         height: 223px;
         width: auto;
@@ -67,5 +64,9 @@
 
     .landingcard h3 {
         font-size: 64px;
+    }
+
+    .landcardTitle {
+        margin-top: 60px;
     }
 }
