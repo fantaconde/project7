@@ -1,6 +1,6 @@
 import React from "react";
 import properties from "../../logements.json";
-import CollapseComponent from "../../components/collapseComponent/collapse";
+import CollapseComponent from "../../components/propertyCollapse/collapse";
 import "./propertyDetails.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -11,7 +11,6 @@ export default function PropertyDetails() {
   // Get property from url
   const params = useParams();
 
-
   const [homeProperty, setHomeProperty] = useState({});
   const [equipments, setEquipments] = useState([]);
   const [equipmentsList, setEquipmentsList] = useState([]);
@@ -20,6 +19,12 @@ export default function PropertyDetails() {
   const [rating, setRating] = useState(0);
   const [carouselImages, setCarouselImages] = useState([]);
 
+  const style = {
+    // Adding media query..
+    "@media (min-width:768px)": {
+      width: "50%",
+    },
+  };
 
   useEffect(() => {
     // console.log(params.key);
@@ -101,13 +106,18 @@ export default function PropertyDetails() {
           </div>
         </div>
       </div>
-      <div className="propertDescEquipment">
+
+      <div className="collapseComponents">
         <CollapseComponent
           title="Description"
           content={homeProperty.description}
+          style={style}
         />
-
-        <CollapseComponent title="Equipments" content={equipmentsList} />
+        <CollapseComponent
+          title="Equipments"
+          content={equipmentsList}
+          style={style}
+        />
       </div>
     </div>
   );

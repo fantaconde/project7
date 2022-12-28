@@ -1,6 +1,6 @@
 import React from "react";
 import LandingCard from "../../components/landingcard/landingcard";
-import CollapseComponent from "../../components/collapseComponent/collapse";
+import CollapseComponent from "../../components/aboutCollapse/collapse";
 import image from "../../assets/about-banner.png";
 export default function About() {
   return (

@@ -73,8 +73,9 @@
 .propertDescEquipment {
     display: flex;
     flex: 1;
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
+
 
 /* for screens below 335px */
 @media (max-width: 375px) {
@@ -135,8 +136,15 @@
 
 }
 
-/* Screen between  370px to 720px */
-@media (min-width: 390px) and (max-width: 720px) {
+
+
+
+
+.checked {
+    color: orange;
+}
+
+@media (max-width: 767px) {
     .property {
         display: inline-block;
         /* justify-content: space-between; */
@@ -189,14 +197,13 @@
     }
 
     /* .propertyTagsStack {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
 }
 
-/* for screens above 720px */
-@media (min-width: 720px) {
+@media (min-width:768px) {
     .propertDescEquipment {
         display: flex;
         flex: 1;
@@ -210,9 +217,12 @@
     .propertyStackHost {
         display: none;
     }
-}
 
+    .collapseComponents{
+        display: flex;
+    }
 
-.checked {
-  color: orange;
+    .cb{
+        width: 50%;
+    }
 }

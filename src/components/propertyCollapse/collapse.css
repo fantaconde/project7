@@ -22,9 +22,8 @@
 
     /* display: flex; */
     flex-grow: 1;
-    margin: 10px;
+    margin: 20px;
     position: relative;
-    /* width: 100%; */
     /* width: auto;
     width: 100vw; */
 }
@@ -46,25 +45,19 @@
 }
 
 
-
-/* for screens below 335px */
-@media (max-width: 335px) {
-
-    .collapseExpanded {
-        font-size: 14px;
-    }
-}
-
-/* Screen between  335px to 720px */
-@media (min-width: 340px) and (max-width: 720px) {
+@media (max-width: 767px) {
     .collapseExpanded {
         font-size: 16px;
     }
 }
 
 /* for screens above 720px */
-@media (min-width: 720px) {
+@media (min-width:768px) {
     .collapseExpanded {
         font-size: 24px;
+    }
+
+    .collapseDiv {
+        width: 50%;
     }
 }
