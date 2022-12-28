@@ -7,6 +7,8 @@ import Footer from "./components/footer/footer";
 import About from "./pages/aboutpage/aboutpage";
 import ErrorPage from "./pages/errorpage/error";
 import PropertyDetails from "./pages/propertyDetails/propertyDetails";
+import "./index.css";
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
