@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Tags from "../../components/tags/tags";
 import CarouselCard from "../../components/Carousel/carousel";
-
+import Footer from "../../components/footer/footer";
 
 export default function PropertyDetails() {
   // Get property from url
@@ -24,7 +24,13 @@ export default function PropertyDetails() {
   useEffect(() => {
     // console.log(params.key);
     //get the property from the json file
+    
     const Property = properties.find((property) => property.id === params.key);
+
+    // Redirect to error page if property not found
+    if (!Property) {
+      window.location.href = "/error";
+    }
     // console.log(Property);
 
     //set the property value
@@ -87,7 +93,7 @@ export default function PropertyDetails() {
             ))}
             {/* Generat ethe number of stars without a rating */}
             {Array.from({ length: 5 - rating }, (_, i) => (
-              <span key={i} className="fa fa-star"></span>
+              <span key={i} className="fa fa-star unchecked"></span>
             ))}
           </div>
         </div>
@@ -120,6 +126,7 @@ export default function PropertyDetails() {
         />
         <CollapseComponent title="Equipments" content={equipmentsList} />
       </div>
+      <Footer />
     </div>
   );
 }

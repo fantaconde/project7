@@ -45,25 +45,18 @@
 }
 
 
-
-/* for screens below 335px */
-@media (min-width: 335px) {
-
+@media (max-width:767px) {
     .collapseExpanded {
         font-size: 14px;
     }
 }
 
-/* Screen between  335px to 720px */
-@media (min-width: 340px) and (max-width: 720px) {
+@media (min-width: 768px) {
     .collapseExpanded {
         font-size: 16px;
     }
-}
 
-/* for screens above 720px */
-@media (min-width: 720px) {
-    .collapseExpanded {
-        font-size: 24px;
+    .collapseDiv {
+        width: 96vw !important;
     }
 }

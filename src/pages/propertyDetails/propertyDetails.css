@@ -55,7 +55,7 @@
 
 .rating {
     color: #ff6060 !important;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -141,7 +141,11 @@
 
 
 .checked {
-    color: orange;
+    color: #FF6060;;
+}
+
+.unchecked{
+    color: gray
 }
 
 @media (max-width: 767px) {

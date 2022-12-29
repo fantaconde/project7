@@ -4,6 +4,7 @@ import LandingCard from "../../components/landingcard/landingcard";
 import properties from "../../logements.json";
 import './homepage.css'
 import image from '../../assets/landing-banner.png'
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

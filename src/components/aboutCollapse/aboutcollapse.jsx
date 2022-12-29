@@ -1,5 +1,5 @@
 import React from "react";
-import "./collapse.css";
+import "./aboutcollapse.css";
 
 function CollapseComponent({ title, content}) {
   const [isExpanded, setIsExpanded] = React.useState(false);

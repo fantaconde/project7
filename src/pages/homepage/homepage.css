@@ -7,6 +7,10 @@
 
 }
 
+.footer{
+    display: block
+}
+
 /* for screens below 335px */
 @media (min-width: 335px) {
     .homeProperties {
@@ -32,13 +36,16 @@
 }
 
 /* Screen between  335px to 1024px */
-@media (min-width: 765px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .homeProperties {
 
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+        background-color: #F6F6F6;
+        margin: 20px;
+        border-radius: 25px;
 
     }
 }

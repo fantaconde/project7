@@ -12,8 +12,8 @@
     background-size: cover;
     margin: 10px;
     height: 415px;
-    width: 90vw !important;
-    vertical-align: auto;
+    width: 96vw !important;
+    vertical-align: baseline !important;
     /* min-width: none; */
 }
 

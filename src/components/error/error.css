@@ -11,6 +11,7 @@
     font-size: 18px;
     margin-bottom: 200px;
     padding-bottom: 40px;
+    text-decoration: underline;
 }
 
 .error h1 {
@@ -25,18 +26,23 @@
     font-weight: 500;
     line-height: 51px;
     letter-spacing: 0em;
+    margin-bottom: 80px;
+    margin-top: 50px;
 }
 
 /* for screens below 335px */
 @media (min-width: 335px) {
-
+    .error h2 {
+        font-size: 24px;
+    }
 }
 
 /* Screen between  335px to 1024px */
 @media (min-width: 340px) and (max-width: 960px) {
-
+    .error h2 {
+        font-size: 24px;
+    }
 }
 
 /* for screens above 960px*/
-@media (min-width: 960px) {
-}
+@media (min-width: 960px) {}
