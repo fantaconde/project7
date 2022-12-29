@@ -40,7 +40,7 @@ export default function PropertyDetails() {
     setEquipments(Property.equipments);
     //make the equpment a list of values
     const listItems = equipments.map((equipment, id) => (
-      <li key={id}>{equipment}</li>
+      <li key={id} style={{listStyleType: "none"}}>{equipment}</li>
     ));
 
     // set the rating stars

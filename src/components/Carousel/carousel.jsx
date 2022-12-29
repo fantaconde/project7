@@ -30,6 +30,11 @@ function CarouselCard({ imageSources }) {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={imageSources[currentIndex]} alt="First slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <p>
+                { currentIndex +1 }/{imageSources.length}
+              </p>
+            </div>
           </div>
         </div>
         {controlButton && (
