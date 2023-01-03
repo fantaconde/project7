@@ -6,6 +6,7 @@ import Footer from "../../components/footer/footer";
 export default function About() {
   return (
     <div>
+      {/* The about page doesnt have the title only the image */}
       <LandingCard image={image} />
       <CollapseComponent
         title="Fiabilité"

@@ -10,6 +10,7 @@ import CarouselCard from "../../components/Carousel/carousel";
 import Footer from "../../components/footer/footer";
 
 export default function PropertyDetails() {
+
   // Get property from url
   const params = useParams();
 
@@ -22,11 +23,12 @@ export default function PropertyDetails() {
   const [carouselImages, setCarouselImages] = useState([]);
 
   useEffect(() => {
-    // console.log(params.key);
+    // console.log(params.id);
     //get the property from the json file
-    
-    const Property = properties.find((property) => property.id === params.key);
 
+    //Find if the property exists
+  
+    const Property = properties.find((property) => property.id === params.id);
     // Redirect to error page if property not found
     if (!Property) {
       window.location.href = "/error";
@@ -39,15 +41,15 @@ export default function PropertyDetails() {
     //set the property equipments
     setEquipments(Property.equipments);
     //make the equpment a list of values
+
     const listItems = equipments.map((equipment, id) => (
       <li key={id} style={{listStyleType: "none"}}>{equipment}</li>
     ));
+  //set the list of equipments
+    setEquipmentsList(listItems);
 
     // set the rating stars
     setRating(Property.rating);
-
-    //set the list of equipments
-    setEquipmentsList(listItems);
 
     //set the host details
     setHost(Property.host);
@@ -58,7 +60,7 @@ export default function PropertyDetails() {
     //set carousel images
     setCarouselImages(Property.pictures);
     console.log(carouselImages[0]);
-  }, [carouselImages, equipments, homeProperty, params.key]);
+  }, [carouselImages, equipments, homeProperty, params.id]);
 
   return (
     <div className="propertyDetails">
@@ -85,10 +87,12 @@ export default function PropertyDetails() {
       <div className="propertyTagsStack">
         {/* displaying tags */}
         <Tags tags={tags} />
+
         <div className="ratingStack ratingStack-xm">
           <div className="rating">
             {/* Generate the number of stars with a rating */}
             {Array.from({ length: rating }, (_, i) => (
+              // Generating a list of  stars
               <span key={i} className="fa fa-star checked"></span>
             ))}
             {/* Generat ethe number of stars without a rating */}
@@ -97,6 +101,8 @@ export default function PropertyDetails() {
             ))}
           </div>
         </div>
+
+
       </div>
       <div className="propertyStackHost ">
         <div className="ratingStack ratingStack-sm">
@@ -119,11 +125,13 @@ export default function PropertyDetails() {
         </div>
       </div>
 
+        {/* Passng the description */}
       <div className="collapseComponents">
         <CollapseComponent
           title="Description"
           content={homeProperty.description}
         />
+        {/* Passing the Equipment list component */}
         <CollapseComponent title="Equipments" content={equipmentsList} />
       </div>
       <Footer />

@@ -9,8 +9,11 @@ import Footer from "../../components/footer/footer";
 export default function Home() {
   return (
     <div className="home">
+      {/* The homepage has a title and image */}
       <LandingCard title="Chez vous, partout et ailleurs" image={image} />
       <div className="homeProperties">
+        {/* Looping to get all the properties as props for the card */}
+        {/* Act as for each */}
         {properties.map((property) => (
           <KasaCard
             key={property.id}

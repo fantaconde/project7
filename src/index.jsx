@@ -11,13 +11,18 @@ import "./index.css";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      {/* Appears in all the pages */}
       <NavBar />
       <Routes>
+        {/* Route to Hmepage */}
         <Route path="/" element={<Home />} />
+        {/* Route to about */}
         <Route path="/about" element={<About />} />
+        {/* Route to error */}
         <Route path="*" element={<ErrorPage />} />
         <Route path="/error" element={<ErrorPage />} />
-        <Route path="/property/:key" element={<PropertyDetails />} />
+        {/* Route to property details */}
+        <Route path="/property/:id" element={<PropertyDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>,
