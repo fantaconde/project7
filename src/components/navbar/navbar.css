@@ -16,9 +16,25 @@
 
 }
 
+@media (max-width:330px) {
+    .navBar {
+        margin-top: -20px !important;
+        margin-bottom: 10px !important;
+    }
 
+    .navBar img {
+        width: 50px !important;
+        margin-bottom: -50px !important;
+    }
 
-@media (max-width: 767px) {
+    .navLink{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+}
+
+@media (min-width:331px) and (max-width: 767px) {
     .navLink {
         /* Make the distance between the navigation */
         margin-left: 10px;
@@ -49,7 +65,7 @@
         margin-right: 10px;
     }
 
-    .navLink{
+    .navLink {
         margin-left: 57px;
     }
 }

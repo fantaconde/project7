@@ -17,17 +17,26 @@
     /* min-width: none; */
 }
 
-.carouselImages button{
+.carouselImages button {
     border-style: none;
     background-color: transparent;
 }
 
-.carouselImages{
+.carouselImages {
     display: flex;
     justify-content: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width:330px) {
+    .carouselImages img {
+        height: 200px;
+        /* margin-left: 10px; */
+
+    }
+
+}
+
+@media (min-width:331px) and (max-width: 767px) {
     .carouselImages img {
         height: 255px;
         margin-left: 10px;
@@ -36,6 +45,4 @@
 
 }
 
-@media (min-width:768px){
-
-}
+@media (min-width:768px) {}

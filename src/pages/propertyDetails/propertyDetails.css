@@ -79,6 +79,33 @@
 
 
 /* for screens below 335px */
+@media (max-width:330px) {
+
+    .rating {
+        font-size: 12px !important;
+        margin-top: -5px !important;
+    }
+
+    .hostPicture {
+        width: 40px !important;
+        height: 40px !important;
+        margin-top: -10px !important;
+        margin-left: 10px !important;
+    }
+
+    .propertyHost {
+        font-size: 15px !important;
+        line-height: 15px !important;
+        margin: 10px !important;
+    }
+
+    .ratingStack{
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+        margin-right: 2px !important;
+    }
+}
+
 @media (max-width: 375px) {
     .propertDescEquipment {
         display: inline-block;
@@ -142,10 +169,11 @@
 
 
 .checked {
-    color: #FF6060;;
+    color: #FF6060;
+    ;
 }
 
-.unchecked{
+.unchecked {
     color: gray
 }
 
@@ -223,11 +251,11 @@
         display: none;
     }
 
-    .collapseComponents{
+    .collapseComponents {
         display: flex;
     }
 
-    .cb{
+    .cb {
         width: 50%;
     }
 }
