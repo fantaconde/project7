@@ -16,7 +16,7 @@
 
 }
 
-@media (max-width:330px) {
+@media (max-width:342px) {
     .navBar {
         margin-top: -20px !important;
         margin-bottom: 10px !important;
@@ -34,7 +34,7 @@
 
 }
 
-@media (min-width:331px) and (max-width: 767px) {
+@media (min-width:343px) and (max-width: 767px) {
     .navLink {
         /* Make the distance between the navigation */
         margin-left: 10px;

@@ -79,7 +79,7 @@
 
 
 /* for screens below 335px */
-@media (max-width:330px) {
+@media (max-width:342px) {
 
     .rating {
         font-size: 12px !important;
@@ -99,7 +99,7 @@
         margin: 10px !important;
     }
 
-    .ratingStack{
+    .ratingStack {
         margin-top: 10px !important;
         margin-left: 10px !important;
         margin-right: 2px !important;
